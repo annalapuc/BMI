@@ -1,0 +1,29 @@
+import java.util.*;
+import static java.lang.Math.*;
+public class BMIBMR {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("Program obliczający BMI oraz BMR");
+		System.out.println("Podaj swój wzrost (m2)");
+		double height=in.nextDouble();
+		System.out.println("Podaj swoją wagę (kg)");
+		double weight=in.nextInt();
+		double bmi;
+		bmi=weight/pow(height,2);
+		System.out.println("Twoje BMI wynosi: "+bmi);
+		if (bmi<18.5)
+		{
+			System.out.println("Masz niedowage");
+		}
+		else if ((bmi>18.5)&&(bmi<26))
+		{
+			System.out.println("Twoja waga jest w normie");
+		}
+		else if (bmi>26)
+		{
+			System.out.println("Masz nadwage");
+		}
+	}
+
+}
